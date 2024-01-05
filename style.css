@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* Secondary */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1em;
+  word-break: break-all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  height: 100vh;
+  background: var(--pale-blue) url("./images/pattern-background-desktop.svg") top center / 100% 50% no-repeat;
+}
+
+.wrapper {
+  max-width: 23rem;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+
+  @media only screen and (max-width: 375px) {
+    padding: 0 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+  max-width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 1px 0px #777;
+}
+
+.top_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.bottom_desc {
+  padding: 15px 20px 25px;
+  text-align: center;
+}
+
+.group_plan {
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  text-align: left;
+  background: var(--very-pale-blue);
+}
+
+.group_plan-icon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.group_plan-icon .icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.desc_plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc_plan h4 {
+  font-size: clamp(0.8rem, 0.73rem + 0.3vw, 1rem);
+}
+
+.desc_plan > h4 > span {
+  font-size: clamp(0.7rem, 0.665rem + 0.15vw, 0.8rem);
+  display: block;
+  color: var(--desaturated-blue);
+}
+
+h5 {
+  font-size: clamp(0.8rem, 0.73rem + 0.3vw, 1rem);
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+
+.btn_group {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn_group .pay {
+  width: 100%;
+  padding: 10px 0;
+  background: var(--bright-blue);
+  border-radius: 10px;
+  color: var(--pale-blue);
+}
+
+.group_plan a.link,
+.btn_group a.link {
+  transition: all 0.5s linear;
+  font-size: clamp(0.8rem, 0.73rem + 0.3vw, 1rem);
+  text-decoration: none;
+}
+
+.btn_group a.link {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+h1 {
+  padding: 10px 0 20px;
+  font-size: clamp(1rem, 0.718rem + 1.2vw, 1.8rem);
+  font-weight: 900;
+  color: var(--dark-blue);
+}
